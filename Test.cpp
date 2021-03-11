@@ -230,7 +230,8 @@ TEST_CASE("Automatic tests") {
                 digits[7-i] = number%10;
                 number /= 10;
             }
-            // Check that the snowman has all the correct body parts
+            // Check that the snowman has all the correct body parts, checks that each part is in the snowman
+            // find function returns the index of the required string, else returns -1
             CHECK(nospaces(snowman(input)).find(get_hat(digits[0])) != -1);
             CHECK(nospaces(snowman(input)).find(get_nose(digits[1])) != -1);
             CHECK(nospaces(snowman(input)).find(get_left_eye(digits[2])) != -1);
